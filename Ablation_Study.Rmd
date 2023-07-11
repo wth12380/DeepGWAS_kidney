@@ -1,0 +1,31 @@
+---
+title: "Ablation Study"
+author: "Theo Wu"
+date: "7/8/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyr)
+library(dplyr)
+```
+
+
+```{r}
+for (i in 1:21) {
+  file_path <- paste("/proj/yunligrp/users/theowu/DeepGWAS/bin/DeepGWAS_Ablation_TrainingHistory_", i, ".RData", sep = "")
+  assign(paste0("history_", i), load(file_path))
+}
+
+
+
+```
+
+```{r}
+history_1
+```
+
